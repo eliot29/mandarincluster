@@ -107,16 +107,205 @@
             font-weight: 300;
         }
 
+        /* Hero Highlights */
+        .hero-highlights {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 12px 20px;
+            border-radius: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: #2D3748;
+            transition: transform 0.3s;
+        }
+
+        .highlight-item:hover {
+            transform: translateY(-3px);
+        }
+
+        .highlight-icon {
+            font-size: 1.2rem;
+        }
+
+        /* CTA Benefits */
+        .cta-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .cta-benefit {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
         /* Logo styling */
         .logo-container {
-            margin-bottom: 30px;
+            text-align: center;
+            margin: 20px 0 30px 0;
         }
 
         .mandarin-logo {
             width: 180px;
             height: auto;
-            margin: 0 auto;
-            display: block;
+            transition: transform 0.3s;
+            opacity: 0.95;
+        }
+
+        .mandarin-logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* Book Covers Section */
+        .book-covers-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 30px;
+            margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .book-covers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .book-cover-item {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #FFF5E6 0%, #FFE4CC 100%);
+            border-radius: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .book-cover-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .book-cover {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .book-cover:hover {
+            transform: scale(1.02);
+        }
+
+        .book-info h3 {
+            color: #FF6B35;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .book-info p {
+            color: #718096;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .book-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF6B35 0%, #FF8E53 100%);
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .book-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Learning Benefits */
+        .learning-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .benefit-item {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #C7E9B0 0%, #B3E5A0 100%);
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .benefit-item:nth-child(even) {
+            background: linear-gradient(135deg, #FFE5CC 0%, #FFD4B3 100%);
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item h4 {
+            color: #2D3748;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .benefit-item p {
+            color: #4A5568;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonial */
+        .testimonial-highlight {
+            background: linear-gradient(135deg, #E6FFFA 0%, #B2F5EA 100%);
+            border-left: 4px solid #38B2AC;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 10px;
+            font-style: italic;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-highlight p {
+            color: #2D3748;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin: 0;
         }
 
         /* Card Preview */
@@ -253,9 +442,26 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 40px;
+            justify-items: center;
+        }
+
+        @media (max-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                max-width: 100%;
+            }
         }
 
         .feature {
@@ -265,6 +471,8 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             transition: transform 0.3s;
+            max-width: 320px;
+            width: 100%;
         }
 
         .feature:hover {
@@ -425,7 +633,22 @@
                 padding: 60px 0 40px;
             }
 
-            .cards-grid {
+            .mandarin-logo {
+                width: 150px;
+            }
+
+
+            .hero-highlights {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
+            .book-covers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .learning-benefits {
                 grid-template-columns: 1fr;
             }
 
@@ -441,9 +664,19 @@
                 font-size: 1.8rem;
             }
 
+            .cta-benefits {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+
             .btn {
                 padding: 12px 30px;
                 font-size: 1rem;
+            }
+
+            .example-img {
+                max-width: 100%;
             }
         }
 
@@ -466,61 +699,116 @@
             <div class="mandarin-decoration deco-1">解</div>
             <div class="mandarin-decoration deco-2">锁</div>
             <div class="mandarin-decoration deco-3">汉字</div>
-            
+
+
             <h1 class="en">Mandarin Clusters</h1>
             <h1 class="fr">Mandarin Clusters</h1>
-            
+
+            <div class="logo-container">
+                <img src="logo.png" alt="Mandarin Clusters Logo" class="mandarin-logo">
+            </div>
+
             <div class="chinese-title">解锁汉字</div>
             
             <p class="subtitle en">Unlock Chinese with 100 Essential Character Cards</p>
             <p class="subtitle fr">Déverrouillez les caractères chinois avec 100 cartes essentielles</p>
             
-            <p class="subtitle en">Learn a language, share a culture</p>
-            <p class="subtitle fr">Apprendre une langue, partager une culture</p>
+            <div class="hero-highlights">
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎆</span>
+                    <span class="en">100 Essential Characters</span>
+                    <span class="fr">100 Caractères Essentiels</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">🎨</span>
+                    <span class="en">Visual Learning</span>
+                    <span class="fr">Apprentissage Visuel</span>
+                </div>
+                <div class="highlight-item">
+                    <span class="highlight-icon">📱</span>
+                    <span class="en">Kindle Ready</span>
+                    <span class="fr">Prêt pour Kindle</span>
+                </div>
+            </div>
+
+            <p class="subtitle en">Learn a language, share a culture • Start your Chinese journey today!</p>
+            <p class="subtitle fr">Apprendre une langue, partager une culture • Commencez votre voyage chinois aujourd'hui!</p>
         </div>
     </section>
 
-    <!-- Card Preview Section -->
+    <!-- Book Covers Section -->
+    <section class="container">
+        <div class="book-covers-section">
+            <h2 class="en" style="text-align: center; color: #2D3748; margin-bottom: 30px; font-size: 2.2rem;">📚 Available Now on Kindle</h2>
+            <h2 class="fr" style="text-align: center; color: #2D3748; margin-bottom: 30px; font-size: 2.2rem;">📚 Disponible maintenant sur Kindle</h2>
+
+            <div class="book-covers-grid">
+                <div class="book-cover-item">
+                    <img src="images/英语 封面jpg.jpg" alt="English Version Cover" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="en">English Edition</h3>
+                        <h3 class="fr">Édition anglaise</h3>
+                        <p class="en">Perfect for English speakers learning Chinese</p>
+                        <p class="fr">Parfait pour les anglophones apprenant le chinois</p>
+                        <a href="https://www.amazon.fr/dp/B0FPMHKMF1" class="book-btn" target="_blank">
+                            <span class="en">📖 Get on Amazon</span>
+                            <span class="fr">📖 Obtenir sur Amazon</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="book-cover-item">
+                    <img src="images/法语 封面jpg.jpg" alt="French Version Cover" class="book-cover">
+                    <div class="book-info">
+                        <h3 class="en">French Edition</h3>
+                        <h3 class="fr">Édition française</h3>
+                        <p class="en">Ideal for French speakers discovering Chinese</p>
+                        <p class="fr">Idéal pour les francophones découvrant le chinois</p>
+                        <a href="https://www.amazon.fr/dp/B0FPNLQ85N" class="book-btn" target="_blank">
+                            <span class="en">📖 Get on Amazon</span>
+                            <span class="fr">📖 Obtenir sur Amazon</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sample Cards Preview Section -->
     <section class="container">
         <div class="card-preview">
-            <h2 class="en" style="text-align: center; color: #2D3748; margin-bottom: 40px;">Sample Character Cards</h2>
-            <h2 class="fr" style="text-align: center; color: #2D3748; margin-bottom: 40px;">Exemples de cartes</h2>
-            
-            <div class="cards-grid">
-                <div class="sample-card peach">
-                    <div class="card-title en">TO SIT</div>
-                    <div class="card-title fr">S'ASSEOIR</div>
-                    <div class="card-character">坐</div>
-                    <div class="card-pinyin">zuò</div>
-                    <div class="card-meaning en">Sit down</div>
-                    <div class="card-meaning fr">S'asseoir</div>
+            <h2 class="en" style="text-align: center; color: #2D3748; margin-bottom: 30px; font-size: 2.2rem;">🎯 What You'll Learn</h2>
+            <h2 class="fr" style="text-align: center; color: #2D3748; margin-bottom: 30px; font-size: 2.2rem;">🎯 Ce que vous apprendrez</h2>
+
+            <p class="en" style="text-align: center; color: #718096; font-size: 1.2rem; margin-bottom: 40px;">Interactive learning cards with character breakdowns and practical examples</p>
+            <p class="fr" style="text-align: center; color: #718096; font-size: 1.2rem; margin-bottom: 40px;">Cartes d'apprentissage interactives avec décomposition des caractères et exemples pratiques</p>
+
+            <div class="example-images">
+                <img src="images/example1.png" alt="Example learning cards showing character breakdown" class="example-img">
+                <img src="images/example2.png" alt="Example practical usage cards" class="example-img">
+            </div>
+
+            <div class="learning-benefits">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🧩</div>
+                    <h4 class="en">Character Breakdown</h4>
+                    <h4 class="fr">Décomposition des caractères</h4>
+                    <p class="en">Understand how characters are built from basic components</p>
+                    <p class="fr">Comprenez comment les caractères sont construits à partir de composants de base</p>
                 </div>
-                
-                <div class="sample-card">
-                    <div class="card-title en">TO WALK</div>
-                    <div class="card-title fr">MARCHER</div>
-                    <div class="card-character">走</div>
-                    <div class="card-pinyin">zǒu</div>
-                    <div class="card-meaning en">Walk / Leave</div>
-                    <div class="card-meaning fr">Marcher / Partir</div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">💬</div>
+                    <h4 class="en">Practical Examples</h4>
+                    <h4 class="fr">Exemples pratiques</h4>
+                    <p class="en">Real-world sentences and expressions for immediate use</p>
+                    <p class="fr">Phrases et expressions du monde réel pour une utilisation immédiate</p>
                 </div>
-                
-                <div class="sample-card peach">
-                    <div class="card-title en">TO THINK</div>
-                    <div class="card-title fr">PENSER</div>
-                    <div class="card-character">想</div>
-                    <div class="card-pinyin">xiǎng</div>
-                    <div class="card-meaning en">Think / Want</div>
-                    <div class="card-meaning fr">Penser / Vouloir</div>
-                </div>
-                
-                <div class="sample-card">
-                    <div class="card-title en">TO WANT</div>
-                    <div class="card-title fr">VOULOIR</div>
-                    <div class="card-character">要</div>
-                    <div class="card-pinyin">yào</div>
-                    <div class="card-meaning en">Want / Need</div>
-                    <div class="card-meaning fr">Vouloir / Avoir besoin</div>
+                <div class="benefit-item">
+                    <div class="benefit-icon">🎨</div>
+                    <h4 class="en">Visual Memory</h4>
+                    <h4 class="fr">Mémoire visuelle</h4>
+                    <p class="en">Illustrated cards that make learning fun and memorable</p>
+                    <p class="fr">Cartes illustrées qui rendent l'apprentissage amusant et mémorable</p>
                 </div>
             </div>
         </div>
@@ -528,56 +816,59 @@
 
     <!-- Features Section -->
     <section class="features container">
-        <h2 class="en" style="text-align: center; color: #2D3748; font-size: 2.5rem;">Master 100 Essential Chinese Characters!</h2>
-        <h2 class="fr" style="text-align: center; color: #2D3748; font-size: 2.5rem;">Maîtrisez 100 caractères chinois essentiels!</h2>
+        <h2 class="en" style="text-align: center; color: #2D3748; font-size: 2.5rem;">🌟 Why Choose Mandarin Clusters?</h2>
+        <h2 class="fr" style="text-align: center; color: #2D3748; font-size: 2.5rem;">🌟 Pourquoi choisir Mandarin Clusters?</h2>
+
+        <p class="en" style="text-align: center; color: #718096; font-size: 1.3rem; margin-bottom: 20px;">Transform your Chinese learning with our proven cluster method!</p>
+        <p class="fr" style="text-align: center; color: #718096; font-size: 1.3rem; margin-bottom: 20px;">Transformez votre apprentissage du chinois avec notre méthode de groupes éprouvée!</p>
         
         <div class="features-grid">
             <div class="feature">
                 <div class="feature-icon">📚</div>
                 <h3 class="en">Structured Learning</h3>
                 <h3 class="fr">Apprentissage structuré</h3>
-                <p class="en">100 carefully selected essential characters with pinyin, vocabulary, and practical examples</p>
-                <p class="fr">100 caractères essentiels soigneusement sélectionnés avec pinyin, vocabulaire et exemples pratiques</p>
+                <p class="en">100 carefully selected essential characters with pinyin, vocabulary, and practical examples - your foundation for Chinese mastery!</p>
+                <p class="fr">100 caractères essentiels soigneusement sélectionnés avec pinyin, vocabulaire et exemples pratiques - votre fondation pour maîtriser le chinois!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">🎨</div>
                 <h3 class="en">Visual Memory</h3>
                 <h3 class="fr">Mémoire visuelle</h3>
-                <p class="en">Beautiful illustrations and character decompositions to understand and memorize easily</p>
-                <p class="fr">Belles illustrations et décompositions de caractères pour comprendre et mémoriser facilement</p>
+                <p class="en">Beautiful illustrations and character decompositions make learning intuitive and memorable - see patterns, not just strokes!</p>
+                <p class="fr">De belles illustrations et décompositions de caractères rendent l'apprentissage intuitif et mémorable - voyez des motifs, pas seulement des traits!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">🌏</div>
-                <h3 class="en">Cultural Insights</h3>
-                <h3 class="fr">Aperçus culturels</h3>
-                <p class="en">Discover Chinese culture through character origins and mnemonic tips</p>
-                <p class="fr">Découvrez la culture chinoise à travers les origines des caractères et des astuces mnémotechniques</p>
+                <h3 class="en">Cultural Bridge</h3>
+                <h3 class="fr">Pont culturel</h3>
+                <p class="en">Discover the fascinating stories behind each character - connect with 5,000 years of Chinese civilization!</p>
+                <p class="fr">Découvrez les histoires fascinantes derrière chaque caractère - connectez-vous avec 5 000 ans de civilisation chinoise!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">👨‍👩‍👧‍👦</div>
-                <h3 class="en">For Everyone</h3>
-                <h3 class="fr">Pour tous</h3>
-                <p class="en">Perfect for beginners, culture enthusiasts, and parents teaching their children</p>
-                <p class="fr">Parfait pour les débutants, les passionnés de culture et les parents enseignant à leurs enfants</p>
+                <h3 class="en">Family Friendly</h3>
+                <h3 class="fr">Convivial pour la famille</h3>
+                <p class="en">Perfect for beginners, culture enthusiasts, and parents creating magical learning moments with their children!</p>
+                <p class="fr">Parfait pour les débutants, les passionnés de culture et les parents créant des moments d'apprentissage magiques avec leurs enfants!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">📱</div>
-                <h3 class="en">Digital Format</h3>
-                <h3 class="fr">Format numérique</h3>
-                <p class="en">Available on Kindle for learning anywhere, anytime</p>
-                <p class="fr">Disponible sur Kindle pour apprendre n'importe où, n'importe quand</p>
+                <h3 class="en">Learn Anywhere</h3>
+                <h3 class="fr">Apprenez partout</h3>
+                <p class="en">Instant access on Kindle - transform your commute, coffee breaks, or quiet moments into productive learning sessions!</p>
+                <p class="fr">Accès instantané sur Kindle - transformez vos trajets, pauses café ou moments calmes en sessions d'apprentissage productives!</p>
             </div>
-            
+
             <div class="feature">
                 <div class="feature-icon">🎯</div>
-                <h3 class="en">Practical Approach</h3>
-                <h3 class="fr">Approche pratique</h3>
-                <p class="en">Learn one cluster at a time with real-world usage examples</p>
-                <p class="fr">Apprenez un groupe à la fois avec des exemples d'utilisation réels</p>
+                <h3 class="en">Proven Method</h3>
+                <h3 class="fr">Méthode éprouvée</h3>
+                <p class="en">Master clusters systematically - build from simple components to complex characters with confidence and clarity!</p>
+                <p class="fr">Maîtrisez les groupes systématiquement - construisez des composants simples aux caractères complexes avec confiance et clarté!</p>
             </div>
         </div>
     </section>
@@ -585,11 +876,26 @@
     <!-- CTA Section -->
     <div class="container">
         <section class="cta">
-            <h2 class="en">🎁 Special Weekend Offer!</h2>
-            <h2 class="fr">🎁 Offre spéciale du week-end!</h2>
+            <h2 class="en">🚀 Ready to Master Chinese?</h2>
+            <h2 class="fr">🚀 Prêt à maîtriser le chinois?</h2>
             
-            <p class="cta-subtitle en">FREE on Kindle this weekend (September 13-14)</p>
-            <p class="cta-subtitle fr">GRATUIT sur Kindle ce week-end (13-14 septembre)</p>
+            <p class="cta-subtitle en">Start mastering Chinese characters today with our proven method!</p>
+            <p class="cta-subtitle fr">Commencez à maîtriser les caractères chinois aujourd'hui avec notre méthode éprouvée!</p>
+
+            <div class="cta-benefits">
+                <div class="cta-benefit">
+                    <span class="en">✓ Instant Download</span>
+                    <span class="fr">✓ Téléchargement instantané</span>
+                </div>
+                <div class="cta-benefit">
+                    <span class="en">✓ Learn Anywhere</span>
+                    <span class="fr">✓ Apprenez partout</span>
+                </div>
+                <div class="cta-benefit">
+                    <span class="en">✓ Beginner Friendly</span>
+                    <span class="fr">✓ Convivial pour débutants</span>
+                </div>
+            </div>
             
             <div class="cta-buttons">
                 <a href="https://www.amazon.fr/dp/B0FPMHKMF1" class="btn en" target="_blank">Get English Version</a>
@@ -609,7 +915,12 @@
                 
                 <p class="en">Whether you're a complete beginner in Chinese, curious about Chinese culture, or a parent wanting to introduce your child to characters in a fun way, this resource will help you progress more effectively and enjoyably!</p>
                 <p class="fr">Que vous soyez débutant en chinois, curieux de la culture chinoise, ou parent souhaitant initier votre enfant aux caractères de manière ludique, cette ressource vous aidera à progresser plus efficacement et avec plaisir!</p>
-                
+
+                <div class="testimonial-highlight">
+                    <p class="en">💭 "The cluster method revolutionized how I understand Chinese characters. Now I can see the patterns and remember them so much easier!" - Sarah, Student</p>
+                    <p class="fr">💭 "La méthode par groupes a révolutionné ma façon de comprendre les caractères chinois. Maintenant je peux voir les motifs et les retenir beaucoup plus facilement !" - Sarah, Étudiante</p>
+                </div>
+
                 <p class="en">Join thousands of learners who are discovering the beauty of Chinese characters, one cluster at a time.</p>
                 <p class="fr">Rejoignez des milliers d'apprenants qui découvrent la beauté des caractères chinois, un groupe à la fois.</p>
             </div>
